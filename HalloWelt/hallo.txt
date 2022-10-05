@@ -1,0 +1,1 @@
+hallo, das hier ist ein Test um zu sehen ob die .BAT Datei auch funktioniert :D
