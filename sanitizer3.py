@@ -15,8 +15,10 @@ teststring = " - Hallo dies ist ein Test des Sanitizers() der <xml> und ggf auch
 
 #############################################################################
 # Basisdefinition von Werten und Strings
-columns = "123456789012345678901234567890123456789012345678901234567890"
-columns2 = "000000000111111111122222222223333333333444444444455555555556"
+#columns = "123456789012345678901234567890123456789012345678901234567890"
+columns = 6*"1234567890"
+#columns2 = "000000000111111111122222222223333333333444444444455555555556"
+columns2 = 9*"0"+10*"1"+10*"2"+10*"3"+10*"4"+10*"5"+10*"6"
 sonderzeichen = "%$§\"\`\'#/:;-"
 leerzeichen = " \t"
 zeilenumbruch = "\n\n\r"
@@ -43,65 +45,129 @@ sani4 = teststring
 # Sonderzeichen für Programmierung am Ende entfernen!
 # String 4 weiterverarbeiten
 print("es sind " + str(len (sonderzeichen)) + " erfasst und zu bereinigen")
-charx = sonderzeichen[0]
-countx = sani4.count(sonderzeichen[0])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
-print(out)
+
+startx = " Sonderzeichen"
+footerx = " ist so oft vertreten"
+delmitter = ":"
+
+# hier wird das erste Sonderzeichen gezählt
+charx = sonderzeichen[0]                                    # laden des ersten Sonderzeichens aus dem String
+countx = sani4.count(charx[0])                              # zählen des ersten sonderzeichens (vorkommen) im String
+#out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countxstr = str(countx).zfill(2).rjust(5," ")               # aufbereiten der Zahl als String
+countxstr0 = str(countx)
+out = startx + charx + footerx + delmitter + countxstr       # zusammmensetzen der Ausgabestrings
+out0 = countxstr0
+print(out)                                                  # Ausgabe des fertigen Strings
+
 
 charx = sonderzeichen[1]
-countx = sani4.count(sonderzeichen[1])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(charx[0])
+countxstr = str(countx).zfill(2).rjust(5," ")
+countxstr1 = str(countx)
+countx = sani4.count(charx[0])
+out = startx + charx + footerx + delmitter + countxstr
+out1 = countxstr1
 print(out)
+
 
 charx = sonderzeichen[2]
-countx = sani4.count(sonderzeichen[2])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(charx[0])
+countxstr = str(countx).zfill(2).rjust(5," ")
+countxstr2 = str(countx)
+out = startx + charx + footerx + delmitter + countxstr
+out2 = countxstr2
 print(out)
+
 
 charx = sonderzeichen[3]
-countx = sani4.count(sonderzeichen[3])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(charx[0])
+countxstr = str(countx).zfill(2).rjust(5," ")
+countxstr3 = str(countx)
+out = startx + charx + footerx + delmitter + countxstr
+out3 = countxstr3
 print(out)
+
 
 charx = sonderzeichen[4]
-countx = sani4.count(sonderzeichen[4])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(charx[0])
+countxstr = str(countx).zfill(2).rjust(5," ")
+countxstr4 = str(countx)
+out = startx + charx + footerx + delmitter + countxstr
+out4 = countxstr4
 print(out)
+
 
 charx = sonderzeichen[5]
-countx = sani4.count(sonderzeichen[5])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(charx[0])
+countxstr = str(countx).zfill(2).rjust(5," ")
+countxstr5 = str(countx)
+out = startx + charx + footerx + delmitter + countxstr
+out5 = countxstr5
 print(out)
+
 
 charx = sonderzeichen[6]
-countx = sani4.count(sonderzeichen[6])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(charx[0])
+countxstr = str(countx).zfill(2).rjust(5," ")
+countxstr6 = str(countx)
+out = startx + charx + footerx + delmitter + countxstr
+out6 = countxstr6
 print(out)
+
 
 charx = sonderzeichen[7]
-countx = sani4.count(sonderzeichen[7])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(charx[0])
+countxstr = str(countx).zfill(2).rjust(5," ")
+countxstr7 = str(countx)
+out = startx + charx + footerx + delmitter + countxstr
+out7 = countxstr7
 print(out)
+
 
 charx = sonderzeichen[8]
-countx = sani4.count(sonderzeichen[8])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(charx[0])
+countxstr = str(countx).zfill(2).rjust(5," ")
+countxstr8 = str(countx)
+out = startx + charx + footerx + delmitter + countxstr
+out8 = countxstr8
 print(out)
+
 
 charx = sonderzeichen[9]
-countx = sani4.count(sonderzeichen[9])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(charx[0])
+countxstr = str(countx).zfill(2).rjust(5," ")
+countxstr9 = str(countx)
+out = startx + charx + footerx + delmitter + countxstr
+out9 = countxstr9
 print(out)
+
 
 charx = sonderzeichen[10]
-countx = sani4.count(sonderzeichen[10])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(charx[0])
+countxstr = str(countx).zfill(2).rjust(5," ")
+countxstr10 = str(countx)
+out = startx + charx + footerx + delmitter + countxstr
+out10 = countxstr10
+#countxstr10
 print(out)
 
+
 charx = sonderzeichen[11]
-countx = sani4.count(sonderzeichen[11])
-out="Sonderzeichen " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(charx[0])
+countxstr = str(countx).zfill(2).rjust(5," ")
+countxstr11 = str(countx)
+out = startx + charx + footerx + delmitter + countxstr
+out11 = countxstr11
+#countxstr11
 print(out)
+
+#print (float(out0) + float(out1) + float(out2) + float(out3) + float(out4) + float(out5) + float(out6) + float(out7) + float(out8) + float(out9) + float(out10) + float(out11))
+Summe1 = (float(out0) + float(out1) + float(out2) + float(out3) + float(out4) + float(out5) + float(out6) + float(out7) + float(out8) + float(out9) + float(out10) + float(out11))
+print("Es sind " + str(Summe1) + " Sonderzeichen im Text enthalten ")
+
+
+#print (float(countxstr10) + float(countxstr11))
 ####################################################################################################
 # anzahl Klammern ausgeben
 # Sonderzeichen für Programmierung am Ende entfernen!
@@ -112,43 +178,70 @@ print(columns)
 print("es sind " + str(len (klammern)) + " erfasst und zu bereinigen")
 charx = klammern[0]
 countx = sani4.count(klammern[0])
-out="Klammer       " + charx + " ist  so oft vertreten :" + str(countx)
+countxstr = str(countx).zfill(2).rjust(3," ")
+countxstr00 = str(countx)
+out="Klammer       " + charx + " ist  so oft vertreten :" + str(countxstr)
+out00 = countxstr00
 print(out)
 
 charx = klammern[1]
-countx = sani4.count(klammern[1])
-out="Klammer       " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(klammern[0])
+countxstr = str(countx).zfill(2).rjust(3," ")
+countxstr01 = str(countx)
+out="Klammer       " + charx + " ist  so oft vertreten :" + str(countxstr)
+out01 = countxstr01
 print(out)
 
 charx = klammern[2]
-countx = sani4.count(klammern[2])
-out="Klammer       " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(klammern[0])
+countxstr = str(countx).zfill(2).rjust(3," ")
+countxstr02 = str(countx)
+out="Klammer       " + charx + " ist  so oft vertreten :" + str(countxstr)
+out02 = countxstr02
 print(out)
 
 charx = klammern[3]
-countx = sani4.count(klammern[3])
-out="Klammer       " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(klammern[0])
+countxstr = str(countx).zfill(2).rjust(3," ")
+countxstr03 = str(countx)
+out="Klammer       " + charx + " ist  so oft vertreten :" + str(countxstr)
+out03 = countxstr03
 print(out)
 
 charx = klammern[4]
-countx = sani4.count(klammern[4])
-out="Klammer       " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(klammern[0])
+countxstr = str(countx).zfill(2).rjust(3," ")
+countxstr04 = str(countx)
+out="Klammer       " + charx + " ist  so oft vertreten :" + str(countxstr)
+out04 = countxstr04
 print(out)
 
 charx = klammern[5]
-countx = sani4.count(klammern[5])
-out="Klammer       " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(klammern[0])
+countxstr = str(countx).zfill(2).rjust(3," ")
+countxstr05 = str(countx)
+out="Klammer       " + charx + " ist  so oft vertreten :" + str(countxstr)
+out05 = countxstr05
 print(out)
 
 charx = klammern[6]
-countx = sani4.count(klammern[6])
-out="Klammer       " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(klammern[0])
+countxstr = str(countx).zfill(2).rjust(3," ")
+countxstr06 = str(countx)
+out="Klammer       " + charx + " ist  so oft vertreten :" + str(countxstr)
+out06 = countxstr06
 print(out)
 
 charx = klammern[7]
-countx = sani4.count(klammern[7])
-out="Klammer       " + charx + " ist  so oft vertreten :" + str(countx)
+countx = sani4.count(klammern[0])
+countxstr = str(countx).zfill(2).rjust(3," ")
+countxstr07 = str(countx)
+out="Klammer       " + charx + " ist  so oft vertreten :" + str(countxstr)
+out07 = countxstr07
 print(out)
+
+Summe2 = (float(out00) + float(out01) + float(out02) + float(out03) + float(out04) + float(out05) + float(out06) + float(out07))
+print("Es sind " + str(Summe2) + " Klammern im Text enthalten ")
 
 ###################################################################################################
 # Grundsätzliche Bearbeitung zu Eingabefehlern und Bösen Eingabe Anfängen und Enden!
@@ -230,4 +323,6 @@ print(columns)
 #sani5 = sani5.lstrip(' ')
 #print(sani5)
 print('um Leerzeichen, Sonderzeichen und Klammern Bereinigter Text 5')
-print('x->:' + sani5)
+print('  ' + sani5)
+
+print("Ins Gesammt haben wir " + str(Summe1+Summe2) + " Klammern und Sonderzeichen!")
