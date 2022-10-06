@@ -163,7 +163,8 @@ out11 = countxstr11
 print(out)
 
 #print (float(out0) + float(out1) + float(out2) + float(out3) + float(out4) + float(out5) + float(out6) + float(out7) + float(out8) + float(out9) + float(out10) + float(out11))
-Summe1 = (float(out0) + float(out1) + float(out2) + float(out3) + float(out4) + float(out5) + float(out6) + float(out7) + float(out8) + float(out9) + float(out10) + float(out11))
+#Summe1 = (float(out0) + float(out1) + float(out2) + float(out3) + float(out4) + float(out5) + float(out6) + float(out7) + float(out8) + float(out9) + float(out10) + float(out11))
+Summe1 = (int(out0) + int(out1) + int(out2) + int(out3) + int(out4) + int(out5) + int(out6) + int(out7) + int(out8) + int(out9) + int(out10) + int(out11))
 print("Es sind " + str(Summe1) + " Sonderzeichen im Text enthalten ")
 
 
@@ -241,6 +242,7 @@ out07 = countxstr07
 print(out)
 
 Summe2 = (float(out00) + float(out01) + float(out02) + float(out03) + float(out04) + float(out05) + float(out06) + float(out07))
+
 print("Es sind " + str(Summe2) + " Klammern im Text enthalten ")
 
 ###################################################################################################
