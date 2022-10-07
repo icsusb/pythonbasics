@@ -23,6 +23,8 @@ zeilenumbruch = "\n\n\r"
 klammern = "<>[]{}()"
 #gescount = []
 testdurchlauf = 1
+endlist = []
+ausgabeliste = []
 ############################################################################
 # Ausgabe vorbereiten
 print(columns2)
@@ -59,6 +61,7 @@ while sonderinc <= len(sonderzeichen):
     footerx = footerx.rjust(29, ' ')    # 2. Hinweis auf 30 Zeichen  auffüllen und rechtsbündig formatieren
     countxstr = countxstr.zfill(2).rjust(5, ' ')
     out = startx + charx + footerx + delimitter + countxstr # ausgabestring zusammensetzen
+    ausgabeliste.append(out)
     print(out)                          # den fertigen ausgabesting ausgeben
     sonderinc += 1
 
@@ -89,6 +92,7 @@ while klammerinc <= len(klammern):
     footerx = footerx.rjust(29, ' ')    # 2. Hinweis auf 30 Zeichen  auffüllen und rechtsbündig formatieren
     countxstr = countxstr.zfill(2).rjust(5, ' ')
     out = startx + charx + footerx + delimitter + countxstr # ausgabestring zusammensetzen
+    ausgabeliste.append(out)
     print(out)                          # den fertigen ausgabesting ausgeben
     klammerinc += 1
 
@@ -117,6 +121,7 @@ while leerinc <= len(leerzeichen):
     footerx = footerx.rjust(29, ' ')    # 2. Hinweis auf 30 Zeichen  auffüllen und rechtsbündig formatieren
     countxstr = countxstr.zfill(2).rjust(6, ' ')
     out = startx + footerx + delimitter + countxstr # ausgabestring zusammensetzen
+    ausgabeliste.append(out)
     print(out)                          # den fertigen ausgabesting ausgeben
     leerinc += 1
 
@@ -142,6 +147,7 @@ while zeilinc <= len(zeilenumbruch):
     footerx = footerx.rjust(29, ' ')    # 2. Hinweis auf 30 Zeichen  auffüllen und rechtsbündig formatieren
     countxstr = countxstr.zfill(2).rjust(6, ' ')
     out = startx + charx + footerx + delimitter + countxstr # ausgabestring zusammensetzen
+    ausgabeliste.append(out)
     print(out)                          # den fertigen ausgabesting ausgeben
     zeilinc += 1
 
@@ -218,6 +224,8 @@ print(columns)
 # noch einmal führende leerzeichen entfernen
 #sani5 = sani5.lstrip(' ')
 #print(sani5)
+print(endlist)
+
 print('um Leerzeichen, Sonderzeichen und Klammern Bereinigter Text 5')
 print('x->:' + sani5)
 ##print("Es wurden insgesammt " + gescount[2] + " Zeichenbearbeitet!")
