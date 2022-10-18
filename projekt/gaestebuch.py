@@ -26,6 +26,7 @@ gi = {}
 index = 0
 gasteintrag1 = {}
 
+
 gasteintrag['vname'] = "Ben"
 gasteintrag['nname'] = "Ertel"
 gasteintrag['telnr'] = "+4900000000"
