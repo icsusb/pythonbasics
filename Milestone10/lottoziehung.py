@@ -1,4 +1,4 @@
-#Gruppe  Alex ; Axel ; Ralf ; Steffen.
+#Gruppe  Alex ; Axel ; Dieter ; Ralf ; Steffen.
 # Lottoziehung 1 von 49
 # Eine Zufahlszahl von 1 bis 49 generieren.
 
