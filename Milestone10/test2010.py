@@ -60,9 +60,10 @@ z= None
 ausgabe2(x,y,z)
 
 def uebergeben(**kwargs):
+    if len(kwargs) < 1: print("kein Parameter übergeben")
     for key, value in kwargs.items():
         print("{0} = {1}".format(key, value))
 
 uebergeben(vorname="Axel",nachname="Brand",alter="35")
 uebergeben(vorname="Axel",nachname="Brand",alter=35)
-
+uebergeben()
