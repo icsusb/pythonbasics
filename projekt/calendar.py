@@ -77,7 +77,7 @@ def check_schaltjahr(datum):
 #view_datum(datum)  # view #  usgabe ob datum korrekt ist
 def view_datum(datum):
     x = False
-    out = "Datum : " + str(datum['jahr']) + "-" + str(datum['monat']).zfill(2) + "-" + str(datum['tag']).zfill(2)
+    out = "Datum : " + str(datum['jahr']).zfill(4) + "-" + str(datum['monat']).zfill(2) + "-" + str(datum['tag']).zfill(2)
     if check_schaltjahr(datum):
         out += "\n"
         out += "Wir haben ein Schaltjahr im Datum!!!"
