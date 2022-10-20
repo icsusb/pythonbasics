@@ -79,19 +79,19 @@ def chat_ai(eingabe):
         out = get_answer(xindex,passende_antworten)
         #print("Antwort"+ out)
     else:
-        yindex = get_random_answer(random_antworten)
         yindex = 1
+        yindex = get_random_answer(eingabe,random_antworten)
         out = get_random_answer(yindex,random_antworten)
         #print("Antwort" + out)
 
     return out
-def genrandom_answer(random_antworten_lst):
-    xindex = -1
+def genrandom_answer(random_antworten):
+    yindex = -1
 
-    return xindex
+    return yindex
 
 
-def get_random_answer(xindex,random_antworten_lst):
+def get_random_answer(yindex,random_antworten):
     out = ""
 
 
