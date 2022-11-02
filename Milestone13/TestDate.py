@@ -37,4 +37,21 @@ print("d3 =", d3)
 d4 = today.strftime("%b-%d-%Y")
 print("d4 =", d4)
 
+########################
+
+# get total Days from a Date until now
+
+from datetime import date
+heute = date.today()
+print(heute)
+
+heute_umf = heute.strftime("%m-%d-%Y. %d.%b.%Y ist ein %A am %d. Tag des %B.")
+print(heute_umf)
+# mit dem Datum lässt sich rechnen
+geburtstag = date(1969,10,10)
+heute = date.today()
+alter = heute - geburtstag
+print(alter.days, "Tage seit Geburt vergangen")
+
+
 
