@@ -7,7 +7,7 @@ class gast_class():
     def __init__(self):
         self.vname = "John"
         self.nname = "Doe"
-        self.gender = "d" #m/w/d
+        self.gender = "d" # m/w/d
         self.alter = "00"
         self.covid = False
         self.status = "noshow"
@@ -16,7 +16,7 @@ class gast_class():
     def get_vname(self):
         return self.vname
 
-    def set_vname(self,name):
+    def set_vname(self, name):
         self.vname = name
         return self
 
@@ -30,28 +30,28 @@ class gast_class():
     def get_gender(self):
         return self.gender
 
-    def set_gender(self,gender):
+    def set_gender(self, gender):
         self.gender = gender
         return self
 
     def get_alter(self):
         return self.alter
 
-    def set_alter(self,alter):
+    def set_alter(self, alter):
         self.alter = alter
         return self
 
     def get_covid(self):
         return self.covid
 
-    def set_covid(self,covid):
+    def set_covid(self, covid):
         self.covid = covid
         return self
 
     def get_status(self):
         return self.status
 
-    def set_status(self,status):
+    def set_status(self, status):
         self.status = status
         return self
 

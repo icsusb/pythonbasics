@@ -19,7 +19,7 @@ class tier():
     def laut_geben(self):
         return  self.laut
 
-    def set_name(self,name1):
+    def set_name(self, name1):
         self.name = name1
 
     def get_name(self):
