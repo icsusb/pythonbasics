@@ -32,16 +32,16 @@ def cliekform():   #basis cli menü
     global einkaufsliste
     zettelitem = {'pname': '', 'menge': '', 'preis': '', 'laden': ''}
     #zettelitem.clear()
-    zettelitem['pname']= input('Bitte gib den Produktnamen ein')
-    zettelitem['menge'] = input('Bitte gib die Menge ein')
-    zettelitem['preis'] = input('Bitte gib den Preis ein')
-    zettelitem['laden'] = input('Bitte gib den Laden ein')
+    zettelitem['pname']= input('Bitte gib den Produktnamen ein ')
+    zettelitem['menge'] = input('Bitte gib die Menge ein ')
+    zettelitem['preis'] = input('Bitte gib den Preis ein ')
+    zettelitem['laden'] = input('Bitte gib den Laden ein ')
     einkaufsliste.append(zettelitem)
 
 def showclieinkaufsliste():
     global einkaufsliste
     for item in einkaufsliste:
-        print('produkt: ' + item["pname"] + ' anz ' + item["menge"] + ' für ' + item["preis"] + ' bei ' + item["laden"])
+        print('produkt: ' + item["pname"] + ' anz ' + item["menge"] + ' für  ' + item["preis"] + '€ ' +' bei ' + item["laden"])
 
 def guiuserfsave():
     print('guiuserfsave')
@@ -122,11 +122,11 @@ def guiekform():
     eingabefeld_wert_laden = tk.StringVar()
     eingabefeld_laden = tk.Entry(frame, textvariable=eingabefeld_wert_laden).grid(row=4, column=2)
 
-    schaltf1 = tk.Button(frame, text="Speichern", command=guiekfsave)
-    schaltf1.grid(row=5, column=1)
+    schaltf1 = tk.Button(frame, text="Speichern", command=guiekfsave).grid(row=5, column=1)
 
-    schaltf2 = tk.Button(frame, text="Zurück", command=guihauptprogramm)
-    schaltf2.grid(row=5, column=2)
+
+    schaltf2 = tk.Button(frame, text="Zurück", command=guihauptprogramm).grid(row=5, column=2)
+
 
 def showguieinkaufsliste():
     global einkaufsliste
@@ -146,8 +146,8 @@ def showguieinkaufsliste():
         xrow += 1
 
     xrow += 1
-    schaltf1 = tk.Button(frame, text="Zurück", command=guihauptprogramm)
-    schaltf1.grid(row=xrow, column=1)
+    schaltf1 = tk.Button(frame, text="Zurück", command=guihauptprogramm).grid(row=xrow, column=1)
+
 
 
 def clieinkaufsliste():    #einkaufsliste erstellen
@@ -263,14 +263,14 @@ def guihauptprogramm(): #hautprogramm als gui
 
     frame.grid(row=1, column=1)
     #frame.pack(side="top", expand=True, fill="both")
-    schaltf1 = tk.Button(frame, text="Benutzer", command=guiuserform)
-    schaltf1.grid(row=1 , column=1)
-    schaltf2 = tk.Button(frame, text="Einkaufszettel", command=guiekform)
-    schaltf2.grid(row=1 , column=2)
-    schaltf3 = tk.Button(frame, text="Benutzer Liste", command=guiuserform)
-    schaltf3.grid(row=2, column=1)
-    schaltf4 = tk.Button(frame, text="Einkaufszettel Liste", command=showguieinkaufsliste)
-    schaltf4.grid(row=2, column=2)
+    schaltf1 = tk.Button(frame, text="Benutzer", command=guiuserform).grid(row=1 , column=1)
+
+    schaltf2 = tk.Button(frame, text="Einkaufszettel", command=guiekform).grid(row=1 , column=2)
+
+    schaltf3 = tk.Button(frame, text="Benutzer Liste", command=guiuserform).grid(row=2, column=1)
+
+    schaltf4 = tk.Button(frame, text="Einkaufszettel Liste", command=showguieinkaufsliste).grid(row=2, column=2)
+
 
     #auswahl=int(input('Bitte wähle 0 für User oder 1 für Einkaufszettel'))
     #if auswahl == 0:
